@@ -141,7 +141,9 @@
     max-width: 340px;
     min-height: 340px;
   }
-
+  .places__place {
+    margin: 72px 24px auto;
+  }
   .places__paragraph-frame {
     border-radius: 4px;
     text-decoration: none;
@@ -201,8 +203,7 @@
       "paragraph"
       "button";
     grid-gap: 30px 0;
-    margin: 0;
-    margin-top: 20px;
+    margin: 20px 16px auto;
   }
 
   .places__title {
