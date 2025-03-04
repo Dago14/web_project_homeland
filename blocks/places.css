@@ -8,19 +8,9 @@
   padding: 0;
 }
 
-.places__division1 {
-  margin: 0;
-  padding: 0;
-}
-
-.places__division2 {
-  margin: 107px 0 0 40px;
-  padding: 0;
-}
-
 .places__title {
+  grid-area: title;
   padding: 0;
-  margin: 0 0 48px;
   font-family: "Inter";
   font-weight: 900;
   font-size: 72px;
@@ -29,6 +19,7 @@
 }
 
 .places__image {
+  grid-area: image;
   margin: 0;
   padding: 0;
   box-shadow: 10px 10px 25px rgba(0, 0, 0, 0.5);
@@ -41,7 +32,16 @@
 }
 
 .places__place {
-  display: flex;
+  max-width: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 152px auto auto;
+  grid-template-areas:
+    "title artist"
+    "image paragraph"
+    "button paragraph";
+  grid-gap: 48px 40px;
+  margin: 80px auto;
 }
 
 .places__paragraph-frame {
@@ -57,7 +57,7 @@
   padding-bottom: 13px;
   padding-left: 20px;
   margin: 48px 0 0 0;
-
+  grid-area: button;
   font-family: "Inter";
   font-weight: 600;
   font-size: 18px;
@@ -77,7 +77,7 @@
   font-weight: 400;
   font-size: 12px;
   line-height: 14.52px;
-
+  grid-area: artist;
   color: rgba(170, 170, 170, 1);
 }
 
@@ -88,7 +88,7 @@
   font-weight: 400;
   font-size: 18px;
   line-height: 22px;
-
+  grid-area: artist;
   color: rgba(255, 255, 255, 1);
 }
 
@@ -98,6 +98,7 @@
 }
 .places__paragraph1 {
   margin: 0 0 25px 0;
+  grid-area: paragraph;
   font-family: "Inter";
   font-weight: 400;
   font-size: 18px;
@@ -106,6 +107,7 @@
 }
 
 .places__paragraph2 {
+  grid-area: paragraph;
   margin: 0 0 25px 0;
   font-family: "Inter";
   font-weight: 400;
@@ -200,10 +202,5 @@
     font-size: 16px;
     line-height: 26.08px;
     color: rgba(255, 255, 255, 1);
-  }
-
-  .places__division2 {
-    margin: 0 0 0 28px;
-    padding: 0;
   }
 }
