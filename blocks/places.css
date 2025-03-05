@@ -38,6 +38,21 @@
     "button paragraph";
   grid-gap: 48px 40px;
   margin: 80px auto;
+  position: relative;
+}
+.places__paragraph-frame_position {
+  position: absolute;
+  bottom: 140px;
+  left: 0;
+}
+
+.places__paragraph-frame_position2 {
+  position: absolute;
+  bottom: 310px;
+}
+.places__paragraph-frame_position3 {
+  position: absolute;
+  bottom: 15px;
 }
 
 .places__paragraph-frame {
@@ -48,7 +63,6 @@
   text-decoration: none;
   max-width: 289px;
   color: #ffffff;
-  left: 151px;
   padding-top: 13px;
   padding-right: 20px;
   padding-bottom: 13px;
@@ -59,8 +73,6 @@
   font-weight: 600;
   font-size: 18px;
   line-height: 21.78px;
-  display: flex;
-  justify-content: center;
 }
 
 .places__paragraph-frame:hover {
@@ -126,12 +138,30 @@
 
   .places__title {
     padding: 0;
-    margin: 0 0 48px;
+    margin: 0;
     font-family: "Inter";
     font-weight: 900;
     font-size: 42px;
     line-height: 46px;
     color: #ffffff;
+    position: absolute;
+    bottom: 0;
+  }
+  .places__paragraph-frame_position {
+    position: absolute;
+    bottom: 165px;
+    left: 0;
+  }
+
+  .places__paragraph-frame_position2 {
+    position: absolute;
+    bottom: 380px;
+    left: 0;
+  }
+  .places__paragraph-frame_position3 {
+    position: absolute;
+    bottom: 80px;
+    left: 0;
   }
 
   .places__image {
@@ -143,13 +173,14 @@
   }
   .places__place {
     margin: 72px 24px auto;
+    position: relative;
   }
   .places__paragraph-frame {
     border-radius: 4px;
     text-decoration: none;
     max-width: 289px;
     color: #ffffff;
-    left: 151px;
+
     padding-top: 13px;
     padding-right: 20px;
     padding-bottom: 13px;
@@ -203,7 +234,6 @@
       "paragraph"
       "button";
     grid-gap: 30px 0;
-    margin: 20px 16px auto;
   }
 
   .places__title {
@@ -240,5 +270,43 @@
 
   .places__paragraph-frame {
     margin: auto;
+    display: flex;
+    align-items: center;
+  }
+
+  .places__paragraph-frame_position {
+    position: relative;
+    bottom: 0;
+  }
+
+  .places__paragraph-frame_position2 {
+    position: relative;
+    bottom: 0;
+  }
+  .places__paragraph-frame_position3 {
+    position: relative;
+    bottom: 0;
+  }
+  .places__paragraph-frame {
+    border-radius: 4px;
+    text-decoration: none;
+    max-width: 289px;
+    color: #ffffff;
+
+    padding-top: 13px;
+    padding-right: 20px;
+    padding-bottom: 13px;
+    padding-left: 20px;
+
+    grid-area: button;
+    max-height: 48px;
+    font-family: "Inter";
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 16.94px;
+    display: flex;
+    justify-content: center;
+    background: linear-gradient(90deg, #0278fe 0.56%, #003a7b 100%);
+    box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.25);
   }
 }
